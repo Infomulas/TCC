@@ -59,7 +59,7 @@ include "conexao.php";
             
         
 <?php
-$sql = "SELECT * FROM produtos WHERE id_categoria = 'alimentos'";
+$sql = "SELECT * FROM produtos WHERE id_categoria = '1'";
 if ($result = $mysqli->query($sql)) {
     while ($row = $result->fetch_assoc()){
         echo 
