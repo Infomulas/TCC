@@ -65,10 +65,10 @@ if ($result = $mysqli->query($sql)) {
         echo 
             "
             <div class='card' style='width: 13rem;'>
-             <img src='".$row['img']."' class='card-img-top' >
+             <img src='".$row['Foto_produto']."' class='card-img-top' >
              <div class='card-body'>
                 <h5 class='card-title'>".$row['valor']."</h5>
-                <p class='card-text'>".$row['descricao']."</p>
+                <p class='card-text'>".$row['produto']."</p>
                 <a href='#' class='btn btn-primary'>carrinho</a>
              </div>
             </div>
