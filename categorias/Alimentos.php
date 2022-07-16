@@ -91,7 +91,7 @@ $mysqli->close();
 
 			<div class="footer-left">
 
-				<a class="logo" href="/"><img src="img/logo.png" alt="logo"></a>
+				<a class="logo" href="/"><img src="../img/logo.png" alt="logo"></a>
 
 				<p class="footer-links">
 					<a href="#" class="link-1">Home</a>
