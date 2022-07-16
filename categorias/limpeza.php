@@ -18,7 +18,7 @@ include "conexao.php";
         <header id="logo">
 
             <a class="headerLogo" href="/">
-                <img src="img/logo.png" alt="logo">
+                <img src="../img/logo.png" alt="logo">
 
                 <h2>Mercado<br>Compre Bem</h2>
             </a>
@@ -62,18 +62,17 @@ include "conexao.php";
 $sql = "SELECT * FROM produtos WHERE id_categoria = '3'";
 if ($result = $mysqli->query($sql)) {
     while ($row = $result->fetch_assoc()){
-        echo 
-            "
+        echo
+        "
             <div class='card' style='width: 13rem;'>
-             <img src='".$row['Foto_produto']."' class='card-img-top' >
-             <div class='card-body'>
-                <h5 class='card-title'>".$row['valor']."</h5>
-                <p class='card-text'>".$row['produto']."</p>
-                <a href='#' class='btn btn-primary'>carrinho</a>
-             </div>
+                <img src='../upload/" . $row['foto_produto'] . "' class='card-img-top' >
+                <div class='card-body'>
+                    <h4 class='card-title'>" . $row['valor'] . "</h4>
+                    <h6 class='card-text'>" . $row['produto'] . "</h6>
+                    <a href='#' class='btn btn-primary'>carrinho</a>
+                </div>
             </div>
-            "
-        ;
+";
     }
     $result->close();
 }

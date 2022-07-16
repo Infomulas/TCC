@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+</head>
+<body>
+<form action="forms.php" method="POST" enctype="multipart/form-data">
+    <label>Id:</label>
+    <input type="number" name="id" placeholder="codigo produto"  disabled>
+    <br>
+
+    <label for="">Id categoria: </label>
+    <input type="radio" name="categoria" value="1"> Alimentos
+    <input type="radio" name="categoria" value="2"> Bebidas
+    <input type="radio" name="categoria" value="3"> limpeza
+    <input type="radio" name="categoria" value="4"> Petshop
+    <br><br>
+    <label for="">Produto: </label>
+    <input type="text" name="produto" placeholder="Insira o produto">
+    <br><br>
+    <label for="">Foto produto: </label>
+    <input name="arquivo" type="file" placeholder="Foto do produto">
+    <br><br>
+    <label for="">Descrição: </label>
+    <input type="text" name="descricao" placeholder="Insira a descrição">
+    <br><br>
+    <label for="">Valor: </label>
+    <input type="number" name="valor" placeholder="Insira o Valor" id="valor" step="0.010">
+    <script>
+        document.getElementById("valor").addEventListener("change", function(){
+        this.value = parseFloat(this.value).toFixed(2);
+        });
+    </script>
+    <br><br>
+    <label for="">Estoque: </label>
+    <input type="number" name="estoque" placeholder="Insira o Estoque">
+    <br><br>
+    <label for="">Estoque Min.: </label>
+    <input type="number" name="estoque_min" placeholder="Insira o Estoque Min.">
+    <br><br>
+    <input type="submit" value="Inserir">
+    <input type="reset" value="apagar">
+    </form>
+</body>
+</html>
