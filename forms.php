@@ -6,7 +6,7 @@ require './conexao.php';
 $id_categoria = $_POST['categoria'];
 $descricao = $_POST['descricao'];
 $valor = $_POST['valor'];
-$estoque = $_POST['estoque'];
+$estoque = 100; //$_POST['estoque'];
 if(isset($_FILES['arquivo'])){
     $arquivo = $_FILES['arquivo']['name'];
     $extensao = strtolower(pathinfo($arquivo, PATHINFO_EXTENSION));

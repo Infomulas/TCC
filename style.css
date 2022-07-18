@@ -9,15 +9,19 @@
 	url('img/icofont/fonts/icofont.svg') format('svg'),
 	url('img/icofont/fonts/icofont.ttf') format('truetype');
 }
-.pro_img{
-	width: 350px;
-	height: 350px;
-	border-color: rgb(223, 0, 0) 1px solid;
+.btn2{
+	position: fixed;
+	bottom: 0;
+	right: 0;
+}
+.cbord{
+	border: 1px solid rgb(0, 0, 0);
 }
 .teste1301{
-	margin: 5px 15px;
+	margin: 10px 35px;
 	display: flex;
 	flex-wrap: wrap;
+	
 }
 .carousel-item{
 	width: 100%;
