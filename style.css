@@ -9,6 +9,11 @@
 	url('img/icofont/fonts/icofont.svg') format('svg'),
 	url('img/icofont/fonts/icofont.ttf') format('truetype');
 }
+.pro_img{
+	width: 350px;
+	height: 350px;
+	border-color: rgb(223, 0, 0) 1px solid;
+}
 .teste1301{
 	margin: 5px 15px;
 	display: flex;

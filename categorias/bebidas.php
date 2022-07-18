@@ -1,5 +1,5 @@
 <?php
-include "conexao.php";
+include "../conexao.php";
 ?>
 <!DOCTYPE html>
 
@@ -34,21 +34,21 @@ include "conexao.php";
     <div id="nav">
 
         <nav>
-            <ul class="nav__links">
+            <ul class="nav__links"> 
                 <li>
-                    <a href="#">Alimentos</a>
+                    <a href="Alimentos.php">Alimentos</a>
                 </li>
 
                 <li>
-                    <a href="bebidas.html">Bebidas</a>
+                    <a href="bebidas.php">Bebidas</a>
                 </li>
 
                 <li>
-                    <a href="#">Banho e limpeza</a>
+                    <a href="limpeza.php">Banho e limpeza</a>
                 </li>
 
                 <li>
-                    <a href="#">Petshop</a>
+                    <a href="petshop.php">Petshop</a>
                 </li>
             </ul>
         </nav>
@@ -65,16 +65,16 @@ include "conexao.php";
         if ($result = $mysqli->query($sql)) {
             while ($row = $result->fetch_assoc()) {
                 echo
-                "
+            "
                     <div class='card' style='width: 13rem;'>
-                        <img src='../upload/" . $row['foto_produto'] . "' class='card-img-top' >
+                        <img src='../upload/" . $row['foto_produto'] . "' class='card-img-top width='210px' height='210px''  >
                         <div class='card-body'>
-                            <h4 class='card-title'>" . $row['valor'] . "</h4>
-                            <h6 class='card-text'>" . $row['produto'] . "</h6>
+                            <h4 class='card-title'>R$: " . $row['valor'] . "</h4>
+                            <h6 class='card-text'>" . $row['descricao'] . "</h6>
                             <a href='#' class='btn btn-primary'>carrinho</a>
                         </div>
                     </div>
-        ";
+            ";  
             }
             $result->close();
         }
