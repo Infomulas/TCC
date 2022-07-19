@@ -17,7 +17,7 @@ include "../conexao.php";
 
         <header id="logo">
 
-            <a class="headerLogo" href="/">
+            <a class="headerLogo" href="../index.php">
                 <img src="../img/logo.png" alt="logo">
 
                 <h2>Mercado<br>Compre Bem</h2>
@@ -59,7 +59,7 @@ include "../conexao.php";
            
         
 <?php
-$sql = "SELECT * FROM produtos WHERE id_categoria = '1'";
+$sql = "SELECT * FROM produtos WHERE id_categoria = '1' ";
 if ($result = $mysqli->query($sql)) {
     while ($row = $result->fetch_assoc()){
         echo 

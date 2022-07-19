@@ -15,7 +15,7 @@
 	height: 50px;      
  }
 .teste1301{
-	margin: 10px 35px;
+	margin: 15px 35px;
 	display: flex;
 	flex-wrap: wrap;
 	
@@ -136,15 +136,10 @@
 
  #produtos {
 	background-color: whitesmoke;
-	margin-top: 2%;
-	margin-left: 2%;
-	margin-right: 2%;
-	margin-bottom: 2%;
-
+	margin: 2%;
+	border: 1px solid #70c422;
 	border-radius: 10px;
-	border-style: solid;
-	border-color: yellowgreen;
-	border-width: 1px;
+
 
  }
 
