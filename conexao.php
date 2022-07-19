@@ -1,6 +1,6 @@
 <?php 
 
-$mysqli = new mysqli("localhost", "root","","comprebem_db", 3307);
+$mysqli = new mysqli("localhost", "root","","comprebem_db");
 if (mysqli_connect_errno()){
     echo "Erro ao conectar ao banco de dados: ".mysqli_connect_error();
     exit();
