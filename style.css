@@ -9,14 +9,11 @@
 	url('img/icofont/fonts/icofont.svg') format('svg'),
 	url('img/icofont/fonts/icofont.ttf') format('truetype');
 }
-.btn2{
-	position: fixed;
-	bottom: 0;
-	right: 0;
-}
-.cbord{
-	border: 1px solid rgb(0, 0, 0);
-}
+
+.text {
+	line-height: 17px;    
+	height: 50px;      
+ }
 .teste1301{
 	margin: 10px 35px;
 	display: flex;
@@ -29,6 +26,13 @@
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
+}
+.tagp{
+
+	display: -webkit-box;
+	line-height: 16px; 
+
+	color: #ab2769;
 }
 .card{
 	margin: 3px;

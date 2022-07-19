@@ -64,17 +64,17 @@ include "../conexao.php";
         $sql = "SELECT * FROM produtos WHERE id_categoria = '2'";
         if ($result = $mysqli->query($sql)) {
             while ($row = $result->fetch_assoc()) {
-                echo
-            "
-            <div class='card cbord' style='width: 12rem;'>
-            <img src='../upload/" . $row['foto_produto'] . "' class='card-img-top width='210px' height='210px''  >
-            <div class='card-body'>
-                <h4 class='card-title'>R$: " . $row['valor'] . "</h4>
-                <h6 class='card-text'>" . $row['descricao'] . "</h6>
-                <a href='#' class='btn btn-primary btn2'>carrinho</a>
-            </div>
-        </div>
-            ";  
+                echo 
+                "
+                    <div class='card ' style='width: 12rem; border:1px solid rgba(0, 0, 0, 0.4);'>
+                        <img src='../upload/" . $row['foto_produto'] . "' class='card-img-top width='210px' height='210px''  >
+                        <div class='card-body'>
+                            <h4 class='card-title'>R$: " . $row['valor'] . "</h4>
+                            <p class='card-text text'>" . $row['descricao'] . "</p>
+                            <a href='#' class='btn btn-primary '>carrinho</a>
+                        </div>
+                    </div>
+                ";
             }
             $result->close();
         }
