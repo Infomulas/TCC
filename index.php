@@ -58,9 +58,9 @@ require "./conexao.php";
     <!-- Produtos -->
 
 
-
+  <a href="./categorias/Alimentos.php" style="text-decoration: none; color: #000; text-align: center;"> <h1>Alimentos</h1></a>
     <div id="produtos" class="teste1301">
-
+  
         <?php
         $sql = "SELECT * FROM produtos WHERE id_categoria = '1' LIMIT 7";
         if ($result = $mysqli->query($sql)) {
@@ -83,6 +83,7 @@ require "./conexao.php";
 
         <br>
     </div>
+    <a href="./categorias/bebidas.php" style="text-decoration: none; color: #000; text-align: center;"> <h1>bebidas</h1></a>
     <div id="produtos" class="teste1301">    
         <?php
         $sql2 = "SELECT * FROM produtos WHERE id_categoria = '2' LIMIT 7";
@@ -106,6 +107,7 @@ require "./conexao.php";
         ?>
 
     </div>
+    <a href="./categorias/limpeza.php" style="text-decoration: none; color: #000; text-align: center;"> <h1>limpeza</h1></a>
     <div id="produtos" class="teste1301">         
         <?php
         $sql3 = "SELECT * FROM produtos WHERE id_categoria = '3' LIMIT 7";
@@ -129,6 +131,7 @@ require "./conexao.php";
         ?>
 
     </div> 
+    <a href="./categorias/petshop.php"  style="text-decoration: none; color: #000; text-align: center;"> <h1>petshop</h1></a>
     <div id="produtos" class="teste1301" >        
         <?php
         $sql4 = "SELECT * FROM produtos WHERE id_categoria = '4' LIMIT 7";
