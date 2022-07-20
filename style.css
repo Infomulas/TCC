@@ -9,6 +9,13 @@
 	url('img/icofont/fonts/icofont.svg') format('svg'),
 	url('img/icofont/fonts/icofont.ttf') format('truetype');
 }
+tr td{
+	width: 180px;
+	border: 2px solid #000 !important;
+}
+td{
+	text-align: center;
+}
 
 .text {
 	line-height: 17px;    
