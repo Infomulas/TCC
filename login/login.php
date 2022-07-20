@@ -1,15 +1,15 @@
 <?php
-include "../conexao.php";
+    session_start();
 ?>
 <!DOCTYPE html>
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Mercadinho</title>
+        <title>Login</title>
+        <link rel="stylesheet" href="css/style_cadastro.css">
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="../style.css">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <link rel="stylesheet" href="style_login.css">
     </head>
     <body>
 
@@ -23,62 +23,54 @@ include "../conexao.php";
                 <h2>Mercado<br>Compre Bem</h2>
             </a>
 
-            <a class="cta" href="../login/login.php">Login</a>
+            <a class="cta" href="#">Login</a>
 
         </header>
 
-        <!-- navegação -->
+        <!-- login -->
 
-        <div id="nav">
+        <div class="login">
 
-        <nav>
-            <ul class="nav__links"> 
-                <li>
-                    <a href="Alimentos.php">Alimentos</a>
-                </li>
+            <div class="cardlogin">
 
-                <li>
-                    <a href="bebidas.php">Bebidas</a>
-                </li>
+                <!-- alerta erro -->
 
-                <li>
-                    <a href="limpeza.php">Banho e limpeza</a>
-                </li>
+                <?php
+                    if(isset($_SESSION['loginErro'])){
+                        echo $_SESSION['loginErro'];
+                        unset($_SESSION['loginErro']);
+                    }
+                ?>
 
-                <li>
-                    <a href="petshop.php">Petshop</a>
-                </li>
-            </ul>
-        </nav>
-        
-        </div>
+                <h1>Login</h1>
 
-        <!-- Produtos -->
+                <div class="textfield">
 
-        <div class="teste1301">
-            
-        
-<?php
-$sql = "SELECT * FROM produtos WHERE id_categoria = '4'";
-if ($result = $mysqli->query($sql)) {
-    while ($row = $result->fetch_assoc()){
-        echo 
-            "
-                <div class='card ' style='width: 12rem; border:1px solid rgba(0, 0, 0, 0.4);'>
-                    <img src='../upload/" . $row['foto_produto'] . "' class='card-img-top width='210px' height='210px''  >
-                    <div class='card-body'>
-                        <h4 class='card-title'>R$: " . $row['valor'] . "</h4>
-                        <p class='card-text text'>" . $row['descricao'] . "</p>
-                        <a href='#' class='cta'>carrinho</a>
-                    </div>
+                    <form action="valida_login.php" method="post">
+
+                        <div class="textfield">
+
+                            <label for="email">E-mail:</label>
+                            <input type="email" name="email" placeholder="Digite o e-mail">
+
+                        </div>
+
+                        <div class="textfield">
+                            <label for="senha">Senha:</label>
+                            <input type="password" name="senha" placeholder="Digite a senha">
+                        </div>
+    
+                        <input type="submit" value="Entrar" name="sendlogin" class="btn-login">
+
+                        <div class="cadastro-link">
+                            <a href="cadastro.php">Crie sua conta!</a>
+                        </div>
+    
+                    </form>
+
                 </div>
-            ";
-    }
-    $result->close();
-}
-$mysqli->close();
-?>
-         
+
+            </div>
 
         </div>
 
@@ -144,6 +136,5 @@ $mysqli->close();
 			</div>
 
 		</footer>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     </body>
 </html>

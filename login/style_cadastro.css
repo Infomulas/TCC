@@ -4,42 +4,15 @@
 	font-family: "icon";
 	font-weight: normal;
 	font-style: "Regular";
-	src: url("img/icofont/fonts/icofont.woff") format("woff2"),
-	url("img/icofont/fonts/icofont.woff") format("woff"),
-	url('img/icofont/fonts/icofont.svg') format('svg'),
-	url('img/icofont/fonts/icofont.ttf') format('truetype');
+	src: url("icofont/fonts/icofont.woff") format("woff2"),
+	url("icofont/fonts/icofont.woff") format("woff"),
+	url('icofont/fonts/icofont.svg') format('svg'),
+	url('icofont/fonts/icofont.ttf') format('truetype');
 }
 
-.text {
-	line-height: 17px;    
-	height: 50px;      
- }
-.teste1301{
-	margin: 15px 35px;
-	display: flex;
-	flex-wrap: wrap;
-	
-}
-.carousel-item{
-	width: 100%;
-	height: 100%;
-	background-size: cover;
-	background-position: center;
-	background-repeat: no-repeat;
-}
-.tagp{
-
-	display: -webkit-box;
-	line-height: 16px; 
-
-	color: #ab2769;
-}
-.card{
-	margin: 3px;
-}
   /* header */
 
-* {
+  * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -51,6 +24,7 @@
     align-items: center;
     padding: 30px 10%;
     background-color: #70c422;
+	margin-bottom: 40%;
   }
 
 
@@ -77,43 +51,13 @@
     height: 10%;
   }
 
-  /* nav */
-
-  #nav{
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    padding: 30px 10%;
-    background-color: yellowgreen;
-  }
-  
-  .nav__links {
-    list-style: none;
-    display: flex;
-  }
-  
-  .nav__links a,
-  .cta,
-  .overlay__content a {
+  .cta {
     font-family: "Montserrat", sans-serif;
     font-weight: 600;
     color: #edf0f1;
     text-decoration: none;
   }
-  
-  .nav__links li {
-    padding: 0px 15px;
-  }
-  
-  .nav__links li a {
-    transition: all 0.3s ease 0s;
-  }
-  
-  .nav__links li a:hover {
-    color: #2da37c;
-    text-decoration: underline;
-  }
-  
+
   .cta {
     margin-left: auto;
     padding: 9px 25px;
@@ -125,36 +69,137 @@
   }
   
   .cta:hover {
-    background-color: #2da37c;
+    background-color: green;
   }
 
   /* parte principal */
 
  body {
      background-color: beige;
+ } 
+
+ .login {
+	width: 100vw;
+	height: 61vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
  }
 
- #produtos {
-	background-color: whitesmoke;
-	margin: 2%;
-	border: 1px solid #70c422;
+ .cardlogin {
+	text-align: center;
+	font-family: "Montserrat", sans-serif;
+	width: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	padding: 30px 35px;
+	border-radius: 20px;
+	background-color: #70c422;
+	box-shadow: 0px 10px 40px #00000056;
+}
+
+.alerta-erro {
+	background-color: #ff0000;
+	color: #fff;
+	padding: 10px;
+	font-size: 15px;
+	border-radius: 20px;
+}
+
+.alerta-sucesso {
+	background-color: dodgerblue;
+	color: #fff;
+	padding: 10px;
+	font-size: 15px;
+	border-radius: 20px;
+}
+
+.cardlogin > h1 {
+	font-weight: 800;
+	margin: 0;
+	margin-bottom: 10px;
+}
+
+.tema {
+	font-size: 20px;
+}
+
+.textfield {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: center;
+	font-size: 15px;
+	font-weight: bold;
+}
+
+.textfield > input {
+	width: 100%;
+	border: none;
 	border-radius: 10px;
-	padding: 15px 5px;
+	padding: 15px;
+	background: white;
+	font-size: 12pt;
+	box-shadow: 0px 10px 40px #00000056;
+	outline: none;
+	box-sizing: border-box;
+	margin-bottom: 10px;
+}
 
- }
+.textfield > label {
+	margin-bottom: 10px;
+}
 
+.textfield > input::placeholder {
+	color: #70c422;
+	font-weight: bold;
+}
+
+.btn-cadastro {
+	width: 25%;
+	padding: 16px 0px;
+	margin: 25px;
+	border: none;
+	margin-left: 0;
+	margin-right: 0;
+	border-radius: 8px;
+	outline: none;
+	text-transform: uppercase;
+	font-weight: 800;
+	letter-spacing: 3px;
+	background: white;
+	color: #70c422;
+	cursor: pointer;
+}
+
+.btn-cadastro:hover {
+	background: green;;
+	color: white;
+}
+
+.cadastro-link > a:link,
+.cadastro-link > a:visited {
+	color: black;
+	font-weight: bold;
+}
+
+.cadastro-link > a:hover {
+	color: white;
+}
 
  /* Footer */
 
  .footer-distributed{
+	margin-top: 40vh;
 	background: #70c422;
-	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+	box-shadow: 0 1px 1px 0 rgba(0, 102, 255, 0.12);
 	box-sizing: border-box;
 	width: 100%;
 	text-align: left;
 	font: bold 16px sans-serif;
 	padding: 55px 50px;
-	
 }
 
 .footer-distributed .footer-left,
@@ -168,10 +213,6 @@
 
 .footer-distributed .footer-left{
 	width: 40%;
-}
-
-.footer-distributed h3 span{
-	color:  lightseagreen;
 }
 
 /* Footer links */

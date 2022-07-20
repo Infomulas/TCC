@@ -17,13 +17,13 @@ include "../conexao.php";
 
         <header id="logo">
 
-            <a class="headerLogo" href="/">
+            <a class="headerLogo" href="../index.php">
                 <img src="../img/logo.png" alt="logo">
 
                 <h2>Mercado<br>Compre Bem</h2>
             </a>
 
-            <a class="cta" href="#">Login</a>
+            <a class="cta" href="../login/login.php">Login</a>
 
         </header>
 

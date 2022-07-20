@@ -25,7 +25,7 @@ require "./conexao.php";
             <h2>Mercado<br>Compre Bem</h2>
         </a>
 
-        <a class="cta" href="#">Login</a>
+        <a class="cta" href="login/login.php">Login</a>
 
     </header>
 
@@ -62,12 +62,12 @@ require "./conexao.php";
     <div id="produtos" class="teste1301">
 
         <?php
-        $sql = "SELECT * FROM produtos WHERE id_categoria = '1' LIMIT 6";
+        $sql = "SELECT * FROM produtos WHERE id_categoria = '1' LIMIT 7";
         if ($result = $mysqli->query($sql)) {
             while ($row = $result->fetch_assoc()) {
                 echo
                 "                           
-                                <div class='card ' style='width: 11rem; border:1px solid rgba(0, 0, 0, 0.4);'>
+                                <div class='card ' style='width: 12rem; border:1px solid rgba(0, 0, 0, 0.4);'>
                                     <img src='./upload/" . $row['foto_produto'] . "' class='card-img-top width='210px' height='180px''  >
                                     <div class='card-body'>
                                         <h4 class='card-title'>R$: " . $row['valor'] . "</h4>
@@ -80,18 +80,18 @@ require "./conexao.php";
             $result->close();
         }
         ?>
-        <span>
-            <br><br><br><br><br>
-            <a href="./categorias/Alimentos.php"><img src="./img/mais.png" width="100px" height="80px"></a>
-        </span>
+
+        <br>
+    </div>
+    <div id="produtos" class="teste1301">    
         <?php
-        $sql2 = "SELECT * FROM produtos WHERE id_categoria = '2' LIMIT 6";
+        $sql2 = "SELECT * FROM produtos WHERE id_categoria = '2' LIMIT 7";
         if ($result = $mysqli->query($sql2)) {
             while ($row = $result->fetch_assoc()) {
                 echo
                 "
                             
-                                <div class='card ' style='width: 11rem; border:1px solid rgba(0, 0, 0, 0.4);'>
+                                <div class='card ' style='width: 12rem; border:1px solid rgba(0, 0, 0, 0.4);'>
                                     <img src='./upload/" . $row['foto_produto'] . "' class='card-img-top width='210px' height='180px''  >
                                     <div class='card-body'>
                                         <h4 class='card-title'>R$: " . $row['valor'] . "</h4>
@@ -104,18 +104,17 @@ require "./conexao.php";
             $result->close();
         }
         ?>
-        <span>
-            <br><br><br><br><br>
-            <a href="./categorias/bebidas.php"><img src="./img/mais.png" width="100px" height="80px"></a>
-        </span>
+
+    </div>
+    <div id="produtos" class="teste1301">         
         <?php
-        $sql3 = "SELECT * FROM produtos WHERE id_categoria = '3' LIMIT 6";
+        $sql3 = "SELECT * FROM produtos WHERE id_categoria = '3' LIMIT 7";
         if ($result = $mysqli->query($sql3)) {
             while ($row = $result->fetch_assoc()) {
                 echo
                 "
                             
-                                <div class='card ' style='width: 11rem; border:1px solid rgba(0, 0, 0, 0.4);'>
+                                <div class='card ' style='width: 12rem; border:1px solid rgba(0, 0, 0, 0.4);'>
                                     <img src='./upload/" . $row['foto_produto'] . "' class='card-img-top width='210px' height='180px''  >
                                     <div class='card-body'>
                                         <h4 class='card-title'>R$: " . $row['valor'] . "</h4>
@@ -128,18 +127,17 @@ require "./conexao.php";
             $result->close();
         }
         ?>
-        <span> 
-            <br><br><br><br><br>
-            <a href="./categorias/limpeza.php"><img src="./img/mais.png" width="100px" height="80px"></a>
-        </span>
+
+    </div> 
+    <div id="produtos" class="teste1301" >        
         <?php
-        $sql4 = "SELECT * FROM produtos WHERE id_categoria = '4' LIMIT 6";
+        $sql4 = "SELECT * FROM produtos WHERE id_categoria = '4' LIMIT 7";
         if ($result = $mysqli->query($sql4)) {
             while ($row = $result->fetch_assoc()) {
                 echo
                 "
                             
-                                <div class='card ' style='width: 11rem; border:1px solid rgba(0, 0, 0, 0.4);'>
+                                <div class='card ' style='width: 12rem; border:1px solid rgba(0, 0, 0, 0.4);'>
                                     <img src='./upload/" . $row['foto_produto'] . "' class='card-img-top width='210px' height='180px''  >
                                     <div class='card-body'>
                                         <h4 class='card-title'>R$: " . $row['valor'] . "</h4>
@@ -153,11 +151,8 @@ require "./conexao.php";
         }
         $mysqli->close();
         ?>
-        <span>
-            <br><br><br><br><br>
-            <a href="./categorias/petshop.php"><img src="./img/mais.png" width="100px" height="80px"></a>
-        </span>
-    </div>
+
+    </div> 
 
 
     <!-- footer -->

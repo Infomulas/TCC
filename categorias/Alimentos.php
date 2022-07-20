@@ -23,7 +23,7 @@ include "../conexao.php";
                 <h2>Mercado<br>Compre Bem</h2>
             </a>
 
-            <a class="cta" href="#">Login</a>
+            <a class="cta" href="../login/login.php">Login</a>
 
         </header>
 

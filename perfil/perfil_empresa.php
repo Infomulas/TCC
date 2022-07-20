@@ -1,15 +1,16 @@
 <?php
-include "../conexao.php";
+require '../conexao.php';
 ?>
 <!DOCTYPE html>
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Mercadinho</title>
+        <title>Mercado Compre Bem</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="../style.css">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <link rel="icon" type="imagem/png" href="../img/logo.png" />
     </head>
     <body>
 
@@ -26,62 +27,57 @@ include "../conexao.php";
             <a class="cta" href="../login/login.php">Login</a>
 
         </header>
-
-        <!-- navegação -->
-
-        <div id="nav">
-
-        <nav>
-            <ul class="nav__links"> 
-                <li>
-                    <a href="Alimentos.php">Alimentos</a>
-                </li>
-
-                <li>
-                    <a href="bebidas.php">Bebidas</a>
-                </li>
-
-                <li>
-                    <a href="limpeza.php">Banho e limpeza</a>
-                </li>
-
-                <li>
-                    <a href="petshop.php">Petshop</a>
-                </li>
-            </ul>
-        </nav>
-        
-        </div>
-
-        <!-- Produtos -->
-
-        <div class="teste1301">
-            
-        
-<?php
-$sql = "SELECT * FROM produtos WHERE id_categoria = '4'";
-if ($result = $mysqli->query($sql)) {
-    while ($row = $result->fetch_assoc()){
-        echo 
-            "
-                <div class='card ' style='width: 12rem; border:1px solid rgba(0, 0, 0, 0.4);'>
-                    <img src='../upload/" . $row['foto_produto'] . "' class='card-img-top width='210px' height='210px''  >
-                    <div class='card-body'>
-                        <h4 class='card-title'>R$: " . $row['valor'] . "</h4>
-                        <p class='card-text text'>" . $row['descricao'] . "</p>
-                        <a href='#' class='cta'>carrinho</a>
-                    </div>
-                </div>
-            ";
+        <br>
+        <div class="div_cliente" align="center">
+            <br>
+            <h7><strong>PERFIL EMPRESA</strong></h7>
+            <br><br><br>
+            <?php
+        $sql = "SELECT nome,email,telefone,endereco,num,bairro,cidade FROM usuarios WHERE id = '2'";
+        if ($result = $mysqli->query($sql)) {
+            while ($row = $result->fetch_assoc()) {
+                echo "                           
+            <table> 
+                <tr>
+                    <td>Empresa:  </td>
+                    <td><label>" . $row['nome'] . "</label></td>
+                </tr>
+                <tr>
+                    <td>E-mail:  </td>
+                    <td><label>" . $row['email'] . "</label></td>
+                </tr>
+                <tr>
+                    <td>Telefone:  </td>
+                    <td><label>" . $row['telefone'] . "</label></td>
+                </tr>
+                <tr>
+                    <td>Rua:  </td>
+                    <td><label>" . $row['endereco'] . "</label></td>
+                </tr>
+                <tr>
+                    <td>Bairro:  </td>
+                    <td><label>" . $row['bairro'] . "</label></td>
+                </tr>
+                <tr>
+                    <td>Cidade:  </td>
+                    <td><label>" . $row['cidade'] . "</label></td>
+                </tr>
+            </table>";
+                                        
+        }
+        $result->close();
     }
-    $result->close();
-}
-$mysqli->close();
-?>
-         
+    ?>
 
+                <tbody>
+            </table>
+            <br><br>
+           <a href="../index.php" class="btn btn-outline-success"> Página Inicial</a> 
+           <a href="inserir_produto.html" class="btn btn-outline-success">inserir Produtos</a>
+            
+            
         </div>
-
+        <br>
         <!-- footer -->
 
         <footer class="footer-distributed">
@@ -90,7 +86,7 @@ $mysqli->close();
 
 			<div class="footer-left">
 
-				<a class="logo" href="/"><img src="../img/logo.png" alt="logo"></a>
+				<a class="logo" href="#"><img src="../img/logo.png" alt="logo"></a>
 
 				<p class="footer-links">
 					<a href="#" class="link-1">Home</a>
