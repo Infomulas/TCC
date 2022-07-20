@@ -71,7 +71,7 @@ include "../conexao.php";
                         <div class='card-body'>
                             <h4 class='card-title'>R$: " . $row['valor'] . "</h4>
                             <p class='card-text text'>" . $row['descricao'] . "</p>
-                            <a href='#' class='cta '>carrinho</a>
+
                         </div>
                     </div>
                 ";
