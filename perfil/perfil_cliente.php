@@ -1,4 +1,6 @@
 <?php
+session_start();
+$_SESSION['emailUser'];
 include "../conexao.php"
 ?>
 <!DOCTYPE html>
@@ -32,10 +34,10 @@ include "../conexao.php"
     <br>
     <div class="div_cliente" align="center">
         <br>
-        <h7><strong>PERFIL CLIENTE</strong></h7>
+        <h7><strong>PERFIL CLIENTE <br>  </strong></h7>
         <br><br><br>
         <?php
-        $sql = "SELECT nome,email,telefone,endereco,num,bairro,cidade FROM usuarios WHERE id = '1'";
+        $sql = "SELECT nome,email,telefone,endereco,num,bairro,cidade FROM usuarios WHERE email = '".$_SESSION['emailUser']."'";
         if ($result = $mysqli->query($sql)) {
             while ($row = $result->fetch_assoc()) {
                 echo "                           
@@ -74,16 +76,9 @@ include "../conexao.php"
             $result->close();
         }
         ?>
-
-
-
-
-
-
-
         <br><br>
-        <button class="btn-hover" >Página Inicial</button>
-        <button class="btn-hover" >Pedidos Anteriores</button>
+        <a href="../index.php" class="cta" >Página Inicial</a>
+
     </div>
     <br>
     <!-- footer -->
